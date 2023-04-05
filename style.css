@@ -1,0 +1,87 @@
+body{
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.7), 
+        rgba(0, 0, 0, 0.7)
+      ), url(https://picsum.photos/id/402/1370/800) no-repeat;
+    display: grid;
+    place-items: center;
+    height: 100%;
+    
+}
+h1{
+    background: transparent;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 5px 4px 10px orange;
+    color: orange;
+}
+h2{
+    color: orange;
+}
+.wrapper {
+    display: inline-flex;
+}
+.wrapper .icon {
+    margin: 0 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 50%;
+    width: 58px;
+    height: 58px;
+    color: orange;
+    
+}
+.wrapper .icon a::before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 90px;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    animation: animate 6s linear infinite;
+    z-index: -1;
+    top: -20px;
+    left: 20px;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.wrapper .icon a::after{
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background-color: black;
+    border-radius: 50%;
+    z-index: -1;
+}
+.wrapper .icon a {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    display: block;
+    background-color: transparent;
+    text-align: center;
+    border-radius: 50%;
+    z-index: 2;
+    text-decoration: none;
+    color: orange;
+}
+.wrapper .icon a:hover{
+    scale: 2;
+    transition: all .3s ease-in-out; 
+    
+}
+.wrapper .icon a i {
+    font-size: 25px;
+    line-height: 60px;
+}
