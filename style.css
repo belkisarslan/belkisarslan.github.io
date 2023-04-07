@@ -1,17 +1,20 @@
 *{
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
-body{
+html, body{
+    margin: 0;
+    height: 100%;
+}
+.container{
     background: linear-gradient(
         rgba(0, 0, 0, 0.7), 
         rgba(0, 0, 0, 0.7)
-      ), url(https://picsum.photos/id/402/1370/800) no-repeat;
+      ), url(https://picsum.photos/id/402/800/600) no-repeat;
     display: grid;
     place-items: center;
     height: 100%;
     width: 100%;
+    background-size: cover;
 }
 h1{
     background: transparent;
@@ -25,7 +28,6 @@ h2{
 }
 .wrapper {
     display: inline-flex;
-    margin-bottom: 20px;
 }
 .wrapper .icon {
     margin: 0 20px;
@@ -92,7 +94,6 @@ h2{
     line-height: 60px;
 }
 .galeria{
-    padding-top: 40px;
     width: 800px;
     height: 200px;
     display: flex;
@@ -117,6 +118,9 @@ h2{
     opacity: 1;
 }
 @media only screen and (max-width: 700px) {
+    .container{
+    width: 100%;
+    }
    .galeria{
     width: 500px;
     height: 150px;
