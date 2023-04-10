@@ -4,6 +4,7 @@
 html, body{
     margin: 0;
     height: 100%;
+    background-color: black;
 }
 .container{
     background: linear-gradient(
@@ -15,6 +16,11 @@ html, body{
     height: 100%;
     width: 100%;
     background-size: cover;
+    background-position: center;
+    -moz-background-size: 100% 100% !important;      /* Firefox 3.6 */
+    -webkit-background-size: 100% 100% !important;  /* Safari 3.0, Chrome */
+    background-size: 100% 100% !important;      /* w3c, Firefox 4.0, ie9  */
+    -o-background-size: 100% 100% !important;   /* Opera 9.5 */
 }
 h1{
     background: transparent;
@@ -25,6 +31,7 @@ h1{
 }
 h2{
     color: orange;
+    padding: 10px;
 }
 .wrapper {
     display: inline-flex;
@@ -120,19 +127,24 @@ h2{
 @media only screen and (max-width: 700px) {
     .container{
     width: 100%;
+    height: auto;
+    background-size: cover;
     }
    .galeria{
+    padding: 10px;
     width: 500px;
-    height: 150px;
+    height: 900px;
+    flex-direction: column;
+    align-items: center;
    }
    .box{
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 250px;
     }
     .box img{
     object-fit: cover;
-    width: 150px;
-    height: 150px;
+    width: 300px;
+    height: 250px;
         
     }
   }
