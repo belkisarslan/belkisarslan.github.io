@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
 :root {
+  --bs-h-back: #537895;
+  --bs-h-front: #09203f;
+  --bs-dark-blue: #071830;
   --bs-frontblue: #09203f;
   --bs-backblue: #537895;
   --bs-blue: #1D809F;
@@ -242,6 +245,7 @@ a {
 }
 a:hover {
   color: var(--bs-link-hover-color);
+  
 }
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
@@ -10825,7 +10829,8 @@ html {
 .content-section {
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
-  background: var(--bs-frontblue);
+  /* background: var(--bs-frontblue); */
+  background: radial-gradient(var(--bs-dark-blue), var(--bs-frontblue) 100%);
   
 }
 
@@ -10854,15 +10859,15 @@ html {
   width: 50px;
   height: 50px;
   text-align: center;
-  color: #fff;
-  background: rgba(52, 58, 64, 0.5);
+  color: #1D809F;
+  background: var(--bs-frontblue);
   line-height: 50px;
 }
 .scroll-to-top:focus, .scroll-to-top:hover {
   color: #fff;
 }
 .scroll-to-top:hover {
-  background: #343a40;
+  background: var(--bs-h-back);
 }
 .scroll-to-top i {
   font-weight: 800;
@@ -10876,7 +10881,7 @@ html {
   height: 100%;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  background-image: linear-gradient(to top, var(--bs-h-back) 0%, var(--bs-h-front) 40%);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -10950,7 +10955,7 @@ html {
   color: #fff;
 }
 .menu-toggle:hover {
-  background: var(--bs-backblue);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .btn-xl {
@@ -10961,7 +10966,7 @@ html {
 footer.footer {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background: var(--bs-frontblue);
+  background: radial-gradient(var(--bs-dark-blue), var(--bs-frontblue) 100%);
 }
 footer.footer .social-link {
   display: block;
@@ -10970,12 +10975,12 @@ footer.footer .social-link {
   width: 4rem;
   line-height: 4.3rem;
   font-size: 1.5rem;
-  background-color: #1D809F;
+  background-color: #1d3557;
   transition: background-color 0.15s ease-in-out;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
 footer.footer .social-link:hover {
-  background-color: #155d74;
+  background-color: var(--bs-h-back);
   text-decoration: none;
 }
 
@@ -10987,7 +10992,7 @@ footer.footer .social-link:hover {
   height: auto;
   padding-top: 8rem;
   padding-bottom: 8rem;
-  background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+  background: radial-gradient(var(--bs-dark-blue), var(--bs-frontblue) 100%);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10997,10 +11002,39 @@ footer.footer .social-link:hover {
   margin: 0;
   padding: 0;
   color: var(--bs-gray-400);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--bs-h-front) 0%, var(--bs-h-back) 100%);
+  color: transparent;
 }
 .masthead h3{
-  color: var(--bs-gray-500);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: linear-gradient(to right, var(--bs-h-front) 0%, var(--bs-h-back) 100%);
+  color: transparent;
 }
+
+
+.btn-detail{
+  background-color: #537895;
+  border-radius: 0.6em;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 20px;
+  padding: 1.2em 2.8em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+  color: var(--bs-frontblue);
+  
+}
+
+.btn-detail:hover{
+  box-shadow: 0 0 10px 0 #4D80EE inset, 0 0 10px 4px #C2D8FA;
+  background-color: transparent;
+}
+
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
@@ -11008,6 +11042,13 @@ footer.footer .social-link:hover {
   .masthead h1, .masthead .h1 {
     font-size: 5.5rem;
   }
+}
+
+.masthead:has(a:hover){
+  --bs-h-front: #4D80EE;
+  --bs-h-back:  #C2D8FA;
+  --bs-frontblue: #1d3557;
+  
 }
 
 .portfolio-item {
@@ -11061,6 +11102,7 @@ footer.footer .social-link:hover {
     margin-bottom: 5rem;
   }
   .portfolio-item img {
+
     transition: -webkit-clip-path 0.25s ease-out;
     transition: clip-path 0.25s ease-out;
     transition: clip-path 0.25s ease-out, -webkit-clip-path 0.25s ease-out;
@@ -11072,7 +11114,8 @@ footer.footer .social-link:hover {
             clip-path: inset(2rem);
   }
   .portfolio-item:hover .caption {
-    background-color: rgba(29, 128, 159, 0.9);
+    /* background-color: rgba(29, 128, 159, 0.9); */
+    background-color: #1d3557;
     -webkit-clip-path: inset(2rem);
             clip-path: inset(2rem);
   }
@@ -11093,4 +11136,10 @@ footer.footer .social-link:hover {
   line-height: 7.5rem;
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.service-icon:hover{
+  box-shadow: 0 0 10px 0 #4D80EE inset, 0 0 10px 4px #C2D8FA;
+  background-color: var(--bs-frontblue);
+  transition: all 150ms ease-in-out;
 }
