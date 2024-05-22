@@ -10881,7 +10881,7 @@ html {
   height: 100%;
   transition: all 0.4s ease 0s;
   transform: translateX(250px);
-  background-image: linear-gradient(to top, var(--bs-h-back) 0%, var(--bs-h-front) 40%);
+  background-image: linear-gradient(to top, var(--bs-h-front) 0%, var(--bs-h-front) 40%);
   border-left: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -10996,6 +10996,7 @@ footer.footer .social-link:hover {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  transition: all 150ms ease-in-out;
 }
 .masthead h1, .masthead .h1 {
   font-size: 4rem;
@@ -11004,13 +11005,13 @@ footer.footer .social-link:hover {
   color: var(--bs-gray-400);
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: linear-gradient(to right, var(--bs-h-front) 0%, var(--bs-h-back) 100%);
+  background-image: linear-gradient(to right, var(--bs-h-back) 0%, var(--bs-h-back) 100%);
   color: transparent;
 }
 .masthead h3{
   -webkit-background-clip: text;
   background-clip: text;
-  background-image: linear-gradient(to right, var(--bs-h-front) 0%, var(--bs-h-back) 100%);
+  background-image: linear-gradient(to right, var(--bs-h-back) 0%, var(--bs-h-back) 100%);
   color: transparent;
 }
 
