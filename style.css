@@ -1,10 +1,10 @@
 @charset "UTF-8";
 
 :root {
-  --bs-h-back: #537895;
-  --bs-h-front: #09203f;
-  --bs-dark-blue: #071830;
-  --bs-frontblue: #09203f;
+  --bs-h-back: #935494;
+  --bs-h-front: #5d305e;
+  --bs-dark-blue: #432045;
+  --bs-frontblue: #3c1e3d;
   --bs-backblue: #537895;
   --bs-blue: #1D809F;
   --bs-indigo: #6610f2;
@@ -10975,7 +10975,7 @@ footer.footer .social-link {
   width: 4rem;
   line-height: 4.3rem;
   font-size: 1.5rem;
-  background-color: #1d3557;
+  background-color: var(--bs-h-front);
   transition: background-color 0.15s ease-in-out;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
@@ -11017,7 +11017,7 @@ footer.footer .social-link:hover {
 
 
 .btn-detail{
-  background-color: #537895;
+  background-color: var(--bs-h-back);
   border-radius: 0.6em;
   cursor: pointer;
   font-size: 1rem;
@@ -11032,8 +11032,9 @@ footer.footer .social-link:hover {
 }
 
 .btn-detail:hover{
-  box-shadow: 0 0 10px 0 #4D80EE inset, 0 0 10px 4px #C2D8FA;
-  background-color: transparent;
+  box-shadow: 0 0 10px 0 var(--bs-h-front) inset, 0 0 10px 4px #C2D8FA;
+  background-color: var(--bs-frontblue);
+  color: var(--bs-h-back); 
 }
 
 @media (min-width: 992px) {
@@ -11046,9 +11047,9 @@ footer.footer .social-link:hover {
 }
 
 .masthead:has(a:hover){
-  --bs-h-front: #4D80EE;
+  --bs-h-front: #5d305e;
   --bs-h-back:  #C2D8FA;
-  --bs-frontblue: #1d3557;
+  --bs-frontblue: #5d305e;
   
 }
 
@@ -11122,7 +11123,7 @@ footer.footer .social-link:hover {
   }
   .portfolio-item:hover .caption {
     /* background-color: rgba(29, 128, 159, 0.9); */
-    background-color: #1d3557;
+    background-color: var(--bs-h-back);
     -webkit-clip-path: inset(2rem);
             clip-path: inset(2rem);
   }
@@ -11136,7 +11137,7 @@ footer.footer .social-link:hover {
 
 .service-icon {
   background-color: #fff;
-  color: #1D809F;
+  color: var(--bs-h-back);
   height: 7rem;
   width: 7rem;
   display: block;
@@ -11146,7 +11147,7 @@ footer.footer .social-link:hover {
 }
 
 .service-icon:hover{
-  box-shadow: 0 0 10px 0 #4D80EE inset, 0 0 10px 4px #C2D8FA;
+  box-shadow: 0 0 10px 0 var(--bs-h-back) inset, 0 0 10px 4px #C2D8FA;
   background-color: var(--bs-frontblue);
   transition: all 150ms ease-in-out;
 }
