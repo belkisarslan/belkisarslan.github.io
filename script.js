@@ -1,3 +1,17 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".preload-img");
+
+  images.forEach((img) => {
+    img.addEventListener("load", function () {
+      img.classList.remove("d-none");
+      const spinner = img.previousElementSibling;
+      if (spinner && spinner.classList.contains("spinner-border")) {
+        spinner.remove();
+      }
+    });
+  });
+});
+
 window.addEventListener('DOMContentLoaded', event => {
 
     const sidebarWrapper = document.getElementById('sidebar-wrapper');
