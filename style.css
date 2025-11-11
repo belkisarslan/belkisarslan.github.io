@@ -11083,12 +11083,12 @@ footer.footer .social-link:hover {
 .portfolio-item .caption .caption-content h2, .portfolio-item .caption .caption-content .h2 {
   font-size: 0.8rem;
   text-transform: uppercase;
-  display: none;
+  display: block;
 }
 .portfolio-item .caption .caption-content p {
   font-weight: 300;
   font-size: 1.2rem;
-  display: none;
+  display: block;
 }
 @media (min-width: 992px) {
   .portfolio-item {
