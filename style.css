@@ -94,7 +94,7 @@ body {
   line-height: var(--bs-body-line-height);
   color: var(--bs-body-color);
   text-align: var(--bs-body-text-align);
-  background-color: var(--bs-body-bg);
+  background-color: var(--bs-dark-blue); 
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -11070,7 +11070,7 @@ footer.footer .social-link:hover {
   display: flex;
   height: 100%;
   width: 100%;
-  background-color: rgba(33, 37, 41, 0.2);
+  /* background-color: rgba(33, 37, 41, 0.2); */
   position: absolute;
   top: 0;
   bottom: 0;
